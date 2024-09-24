@@ -1,0 +1,172 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0ff;
+  font-family: "Poppins", sans-serif;
+  transition: background-color all 0.3s ease-in-out, color all 0.3s ease-in-out;
+}
+body.dark {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 500px;
+  background-color: #fafafa;
+  padding: 0;
+  box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+  margin: 6rem 0;
+  border-radius: 0.75rem;
+}
+#container.dark {
+  background-color: #2a2a2a;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  align-self: flex-start;
+  text-transform: uppercase;
+  box-shadow: 0 -10px 10px 0 rgba(1, 1, 1, 0.05);
+}
+#footer input#taskInput {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background: #fff;
+  width: calc(100% - 3rem - 10px);
+  border: 2px solid #3b44fb;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: border-color all 0.3s ease-in-out;
+}
+#footer input#taskInput:focus {
+  outline: none;
+  border-color: rgb(4.67, 15.1775, 228.83);
+  color: #0d0d0d;
+}
+#footer #taskAdd {
+  transition: all 0.3s ease-in-out;
+  width: 3rem;
+  height: 3rem;
+  background: #3b44fb;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  border-radius: 0.75rem;
+  border: none;
+  outline: none;
+}
+#footer #taskAdd:hover {
+  background: rgb(4.67, 15.1775, 228.83);
+  transform: scale(0.95);
+}
+#footer #taskAdd:active {
+  transform: scale(0.9);
+}
+
+#tasks {
+  padding: 1.5rem 2rem;
+}
+#tasks #tasksList {
+  list-style-type: none;
+  padding-left: 0;
+}
+#tasks #tasksList li {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+  border-radius: 0.75rem;
+  color: #0d0d0d;
+  padding: 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  animation: fadeIn 0.5s linear;
+  background-color: #fff;
+  margin-bottom: 5px;
+  position: relative;
+}
+#tasks #tasksList li:hover {
+  border-right: 55px solid red;
+  transform: scale(1.05);
+  box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.2);
+}
+#tasks #tasksList li:hover .delete {
+  right: -37px;
+  color: white;
+}
+#tasks #tasksList li .delete {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  color: transparent;
+  background: none;
+  border: none;
+  outline: 0;
+  line-height: 0.85rem;
+  font-size: 1rem;
+}
+#tasks #notification {
+  padding-top: 1rem;
+  text-align: center;
+  color: gray;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+#themeToggle #toggleButton {
+  background-color: #f5f5f5;
+  border: 2px solid #3b44fb;
+  color: #3b44fb;
+  padding: 0.5rem;
+  border-radius: 25%;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+#themeToggle #toggleButton:hover {
+  background-color: rgb(108.98, 115.685, 252.02);
+}
+#themeToggle #toggleButton.dark {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+}
+
+#credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8rem;
+  color: gray;
+}
+#credit p {
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
